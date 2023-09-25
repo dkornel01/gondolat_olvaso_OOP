@@ -10,22 +10,21 @@ public class KartyaTrukk {
 
     public KartyaTrukk() {
         indit();
-        melyik();
-    }
-    
-    
-      private static void indit() {
         int oszlop=melyik();
-        Pakli kartyak=new Pakli(oszlop);
-        
-        for (int i = 0; i < 3; i++) {
-            kartyak.Pakli();
-        }
     }
-
     
-
-    private static int melyik() {
+    
+      private  void indit() {
+        Pakli kartyak=new Pakli();
+        kartyak.feltolt();
+        for (int i = 0; i < 3; i++) {
+            kartyak.kirak();
+            kartyak.kever(melyik());
+        }
+        kartyak.ezVolt();
+    }
+      
+      private  int melyik() {
         boolean jo;
         int oszlop;
         do {
@@ -35,4 +34,6 @@ public class KartyaTrukk {
         } while (!jo);
         return oszlop;
     }
+      
+    
 }

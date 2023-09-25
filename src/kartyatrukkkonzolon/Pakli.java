@@ -4,30 +4,25 @@ package kartyatrukkkonzolon;
 
 public class Pakli {
     private String[] pakli = new String[22];
-    private int oszlop;
     
-    public Pakli(int oszlop) {
-        this.oszlop=oszlop;
-        feltolt();
-        kirak();
-        kever(oszlop);
-        ezVolt();
+    public Pakli() {
     }
+
     
-    
-    private  void feltolt() {
+    public  void feltolt() {
         String[] szinek = {"P", "T", "Z", "M"};
         String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
         int i = 1;
         for (String szin : szinek) {
             for (int e = 0; e < ertekek.length && i < pakli.length; e++) {
-                pakli[i++] = szin + "_" + ertekek[e];
+                Lap lap=new Lap(szin + "_" + ertekek[e]);
+                pakli[i++] = lap.getLeiras();
             }
         }
 
     }
     
-    private  void kirak() {
+    public  void kirak() {
         for (int i = 1; i < pakli.length; i++) {
             System.out.printf("%-8s", pakli[i]);
             if (i % 3 == 0) {
@@ -35,7 +30,7 @@ public class Pakli {
             }
         }
     }
-     private  void kever(int oszlop) {
+     public  void kever(int oszlop) {
         // mindig középre a választott
         String[] ujPakli = new String[22];
         switch (oszlop) {
@@ -64,7 +59,8 @@ public class Pakli {
         pakli = ujPakli;
     }
 
-    private  void ezVolt() {
+    public  void ezVolt() {
         System.out.println("A választott lap: " + pakli[11]);
     }
+
 }
