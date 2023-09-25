@@ -13,6 +13,8 @@ public class KartyaTrukk {
     public KartyaTrukk() {
         indit();
     }
+
+    
     
       private void indit() {
         Pakli kartyak=new Pakli( pakli);

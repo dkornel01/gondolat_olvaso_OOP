@@ -3,8 +3,9 @@ package modell;
 
 
 public class Pakli {
+    //private String[] pakli=new String[22];
     private String[] pakli;
-
+            
     public Pakli(String[] pakli) {
         this.pakli=pakli;
         feltolt();
