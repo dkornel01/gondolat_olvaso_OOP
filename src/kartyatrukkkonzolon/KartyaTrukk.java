@@ -10,7 +10,6 @@ public class KartyaTrukk {
 
     public KartyaTrukk() {
         indit();
-        int oszlop=melyik();
     }
     
     
