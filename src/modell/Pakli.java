@@ -1,13 +1,12 @@
-
 package modell;
 
-
 public class Pakli {
+
     //private String[] pakli=new String[22];
     private String[] pakli;
-            
+
     public Pakli(String[] pakli) {
-        this.pakli=pakli;
+        this.pakli = pakli;
         feltolt();
     }
 
@@ -18,21 +17,19 @@ public class Pakli {
     public void setPakli(String[] pakli) {
         this.pakli = pakli;
     }
-    
-    
+
     private void feltolt() {
         String[] szinek = {"P", "T", "Z", "M"};
         String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
         int i = 1;
         for (String szin : szinek) {
             for (int e = 0; e < ertekek.length && i < pakli.length; e++) {
-                Lap lap=new Lap(szin + "_" + ertekek[e]);
+                Lap lap = new Lap(szin + "_" + ertekek[e]);
                 pakli[i++] = lap.getLeiras();
             }
         }
         setPakli(pakli);
-    };
-    
+    }
     
      public void kever(int oszlop) {
         // mindig középre a választott
@@ -61,9 +58,7 @@ public class Pakli {
                 break;
         }
         pakli = ujPakli;
-         setPakli(pakli);
+        setPakli(pakli);
     }
-
-    
 
 }

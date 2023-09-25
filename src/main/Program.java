@@ -6,6 +6,6 @@ import java.util.Scanner;
 public class Program {
 
     public static void main(String[] args) {
-        KartyaTrukk kartya=new KartyaTrukk();
+        KartyaTrukk kartya = new KartyaTrukk();
     }
 }
